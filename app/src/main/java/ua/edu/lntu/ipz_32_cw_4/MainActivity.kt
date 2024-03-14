@@ -33,6 +33,8 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.ViewModel
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -95,4 +97,8 @@ SecondScreen(navController = navController, modifier = Modifier)
         IPZ_32_cw_4Theme {
             Greeting()
         }
+        class MyViewModel : ViewModel() {
+            val somethingPressedOnScreen2 = mutableStateOf(false)
+        }
+
     }
