@@ -5,6 +5,7 @@ import android.os.Bundle
 
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -34,6 +35,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
+import androidx.navigation.findNavController
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -97,8 +99,14 @@ SecondScreen(navController = navController, modifier = Modifier)
         IPZ_32_cw_4Theme {
             Greeting()
         }
-        class MyViewModel : ViewModel() {
-            val somethingPressedOnScreen2 = mutableStateOf(false)
+        class MyActivity : AppCompatActivity() {
+            private val navController by lazy { findNavController(androidx.navigation.R.id.nav_controller_view_tag) }
+
+            // Ваша логіка натискання кнопки чи іншої події на екрані SecondScreen
+            fun somethingPressedOnSecondScreen() {
+                // Використовуємо NavController, щоб навігувати до екрану StartScreen
+                navController.navigate(Screen.StartScreen.route)
+            }
         }
 
     }
