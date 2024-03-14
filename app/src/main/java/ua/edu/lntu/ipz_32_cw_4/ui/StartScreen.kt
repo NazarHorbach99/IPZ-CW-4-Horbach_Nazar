@@ -5,6 +5,7 @@ import androidx.compose.ui.Modifier
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -33,9 +34,14 @@ fun StartScreen(modifier: Modifier = Modifier, navController: NavController)
             text = "Start screen",
             fontSize = 20.sp,
         )
-        Button(onClick = {navController.navigate(Screen.SecondScreen.route)}) {
-            Text(text = "Check next text")
-        }
-    }
 
-}
+            Text(
+                text = "Check next text",
+                modifier = Modifier.clickable {
+                    navController.navigate(Screen.SecondScreen.route)
+                }
+            )
+
+            }
+        }
+
