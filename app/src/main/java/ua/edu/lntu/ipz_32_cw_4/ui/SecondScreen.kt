@@ -10,10 +10,16 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Done
+import androidx.compose.material3.Button
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.ui.graphics.Color
 
 import androidx.compose.ui.tooling.preview.Preview
 import ua.edu.lntu.ipz_32_cw_4.ui.theme.IPZ_32_cw_4Theme
@@ -26,14 +32,19 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 @Composable
- fun SecondScreen(modifier: Modifier = Modifier, navController: NavController)
- {
-     Column(modifier = modifier.padding(16.dp)) {
-         Text(
-             text = "додаткове завдання за певним завданням.",
-             fontSize = 20.sp,
-         )
+fun SecondScreen(modifier: Modifier = Modifier, navController: NavController) {
+    Column(modifier = modifier.padding(16.dp)) {
+        Text(
+            text = "додаткове завдання за певним завданням.",
+            fontSize = 20.sp,
+        )
+        Button(
+            onClick = { /* Дії, які відбудуться при кліку на кнопку */ },
+            modifier = Modifier.fillMaxWidth().padding(16.dp),
+            content = {
+                Icon(Icons.Filled.Done, contentDescription = "Done", tint = Color.Black)
+            }
+        )
+    }
+}
 
-     }
-
- }
