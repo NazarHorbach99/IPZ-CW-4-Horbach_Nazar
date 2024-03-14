@@ -1,28 +1,39 @@
-import androidx.compose.foundation.layout.RowScope
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.Done
-import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
+package ua.edu.lntu.ipz_32_cw_4.ui
 
+import androidx.compose.runtime.Composable
+import ua.edu.lntu.ipz_32_cw_4.Screen
+
+
+import androidx.compose.ui.Modifier
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+
+import androidx.compose.ui.tooling.preview.Preview
+import ua.edu.lntu.ipz_32_cw_4.ui.theme.IPZ_32_cw_4Theme
+import androidx.navigation.compose.NavHost
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import androidx.compose.ui.unit.sp
+import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 @Composable
-fun MyAppBar(title: String) {
-    TopAppBar(
-        title = { Text(text = title) },
-        navigationIcon = {
-            IconButton(onClick = {}) {
-                Icon(Icons.Filled.ArrowBack, contentDescription = "Back")
-            }
-        },
-        actions = {
-            IconButton(onClick = {}) {
-                Icon(Icons.Filled.Done, contentDescription = "Done")
-            }
-        },
-        modifier = Modifier.fillMaxWidth()
-    )
-}
+ fun SecondScreen(modifier: Modifier = Modifier, navController: NavController)
+ {
+     Column(modifier = modifier.padding(16.dp)) {
+         Text(
+             text = "додаткове завдання за певним завданням.",
+             fontSize = 20.sp,
+         )
+
+     }
+
+ }
