@@ -31,8 +31,8 @@ fun StartScreen(modifier: Modifier = Modifier, navController: NavController)
 {
     Column(modifier = modifier.padding(16.dp)) {
         Text(
-            text = "Start screen",
-            fontSize = 20.sp,
+            text = "Список завдань",
+            fontSize = 35.sp,
         )
 
         Text(
