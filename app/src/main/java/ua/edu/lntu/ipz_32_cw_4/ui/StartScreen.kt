@@ -35,13 +35,42 @@ fun StartScreen(modifier: Modifier = Modifier, navController: NavController)
             fontSize = 20.sp,
         )
 
-            Text(
-                text = "Check next text",
-                modifier = Modifier.clickable {
-                    navController.navigate(Screen.SecondScreen.route)
-                }
-            )
+        Text(
+            text = "Завдання 1",
+            modifier = Modifier.clickable {
+                navController.navigate(Screen.SecondScreen.route)
+            }.padding(vertical = 8.dp), // Додаємо вертикальний відступ 8 dp
+            fontSize = 20.sp
+        )
+        Text(
+            text = "Завдання 2",
+            modifier = Modifier.clickable {
+                navController.navigate(Screen.SecondScreen.route)
+            }.padding(vertical = 8.dp), // Додаємо вертикальний відступ 8 dp
+            fontSize = 20.sp
+        )
+        Text(
+            text = "Завдання 3",
+            modifier = Modifier.clickable {
+                navController.navigate(Screen.SecondScreen.route)
+            }.padding(vertical = 8.dp), // Додаємо вертикальний відступ 8 dp
+            fontSize = 20.sp
+        )
+        Text(
+            text = "Завдання 4",
+            modifier = Modifier.clickable {
+                navController.navigate(Screen.SecondScreen.route)
+            }.padding(vertical = 8.dp), // Додаємо вертикальний відступ 8 dp
+            fontSize = 20.sp
+        )
+        Text(
+            text = "Завдання 5",
+            modifier = Modifier.clickable {
+                navController.navigate(Screen.SecondScreen.route)
+            }.padding(vertical = 8.dp), // Додаємо вертикальний відступ 8 dp
+            fontSize = 20.sp
+        )
 
-            }
+    }
         }
 
